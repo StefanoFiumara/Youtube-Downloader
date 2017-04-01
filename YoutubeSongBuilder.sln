@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongBuilder.Core", "SongBuilder.Core\SongBuilder.Core.csproj", "{1642C1D1-D4D1-48DF-9D99-0BBA1175E8BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SongBuilder.Tests", "SongBuilder.Tests\SongBuilder.Tests.csproj", "{7B16C288-0058-4AF4-9A92-DC2912953697}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Songbuilder.Client", "Songbuilder.Client\Songbuilder.Client.csproj", "{A51AE386-C6C9-4819-852F-6351DC40B9D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1642C1D1-D4D1-48DF-9D99-0BBA1175E8BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1642C1D1-D4D1-48DF-9D99-0BBA1175E8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1642C1D1-D4D1-48DF-9D99-0BBA1175E8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1642C1D1-D4D1-48DF-9D99-0BBA1175E8BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B16C288-0058-4AF4-9A92-DC2912953697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B16C288-0058-4AF4-9A92-DC2912953697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B16C288-0058-4AF4-9A92-DC2912953697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B16C288-0058-4AF4-9A92-DC2912953697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51AE386-C6C9-4819-852F-6351DC40B9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51AE386-C6C9-4819-852F-6351DC40B9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51AE386-C6C9-4819-852F-6351DC40B9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51AE386-C6C9-4819-852F-6351DC40B9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

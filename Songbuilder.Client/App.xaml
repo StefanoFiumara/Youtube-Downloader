@@ -1,0 +1,53 @@
+﻿<Application x:Class="Songbuilder.Client.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Songbuilder.Client"
+             xmlns:models="clr-namespace:Songbuilder.Client.Models"
+             xmlns:converters="clr-namespace:Songbuilder.Client.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        
+        <DataTemplate DataType="{x:Type models:TimeStampModel}" x:Key="TimeStampModelTemplate">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="H" />
+                <TextBox PreviewTextInput="ValidateTextBoxValue" TextChanged="ClampTimeValue" Text="{Binding Hours}" Width="25" Height="20"/>
+                <Label Content="M" />
+                <TextBox PreviewTextInput="ValidateTextBoxValue" TextChanged="ClampTimeValue" Text="{Binding Minutes}" Width="25" Height="20"/>
+                <Label Content="S" />
+                <TextBox PreviewTextInput="ValidateTextBoxValue" TextChanged="ClampTimeValue" Text="{Binding Seconds}" Width="25" Height="20"/>
+            </StackPanel>
+        </DataTemplate>
+        
+        <DataTemplate DataType="{x:Type models:SongModel}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                <Label   Grid.Column="0" Grid.Row="0" Content="Youtube Link:" HorizontalAlignment="Right" />
+                <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding YoutubeLink}" Margin="5" Width="500"/>
+                
+                <Label          Grid.Column="0" Grid.Row="1" Content="Song Start Time:" HorizontalAlignment="Right" />
+                <ContentControl Grid.Column="1" Grid.Row="1" Content="{Binding SongStartTime}" ContentTemplate="{StaticResource TimeStampModelTemplate}" />
+                <Label          Grid.Column="0" Grid.Row="2" Content="Song End Time:" HorizontalAlignment="Right" />
+                <ContentControl Grid.Column="1" Grid.Row="2" Content="{Binding SongEndTime}" ContentTemplate="{StaticResource TimeStampModelTemplate}" />
+
+                <StackPanel Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal">
+                    <CheckBox Content="Apply Fade In" IsChecked="{Binding ApplyFadeIn}" Margin="5" />
+                    <CheckBox Content="Apply Fade Out" IsChecked="{Binding ApplyFadeOut}" Margin="5" />
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+
+    </Application.Resources>
+</Application>
